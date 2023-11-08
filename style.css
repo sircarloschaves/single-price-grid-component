@@ -18,6 +18,9 @@
   --clr-ne-ltgray: hsl(204, 43%, 93%);
   --clr-ne-grblue: hsl(218, 22%, 67%);
 
+  /* Font Size */
+  --fs-subtitle: 1.2rem;
+
 }
 
 html,
@@ -55,8 +58,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1.3rem 1fr 1.3rem;
-  grid-template-rows: repeat(3, 1fr);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .grid-container>.card {
@@ -73,18 +75,97 @@ body {
   grid-template-columns: subgrid;
 }
 
+.card {
+  padding-block: 1.4rem;
+}
+
+.card-title {
+  font-family: var(--ff-karla);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-subtitle);
+  color: var(--clr-ne-ltgray);
+}
+
+.text {
+  font-family: var(--ff-karla);
+  font-weight: var(--fw-400);
+  color: var(--clr-ne-grblue);
+  line-height: 1.7;
+  font-size: 0.875rem;
+  margin-top: 1.3em;
+}
+
 .card:nth-child(1) {
   background-color: #fff;
+}
+
+.card:nth-child(1) .card-title {
+  color: var(--clr-pr-cyan);
+}
+
+.accent-text {
+  font-family: var(--ff-karla);
+  font-weight: var(--fw-700);
+  font-size: .9rem;
+  color: var(--clr-pr-yellow);
+  margin-top: 1.4em;
 }
 
 .card:nth-child(2) {
   background-color: var(--clr-pr-cyan);
 }
 
+.price-wrapper {
+  margin-top: 1.3rem;
+  line-height: 1;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-karla);
+  font-weight: var(--fw-700);
+  font-size: 1.8rem;
+  color: var(--clr-ne-ltgray);
+}
+
+.month {
+  color: hsla(203, 44%, 93%, 0.696);
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+  margin-inline-start: .6em;
+}
+
+.complementary-text {
+  font-family: var(--ff-karla);
+  font-weight: var(--fw-400);
+  font-size: .9rem;
+  color: var(--clr-ne-ltgray);
+  margin-top: .8em;
+}
+
+.btn {
+  width: 100%;
+  display: inline-block;
+  background-color: var(--clr-pr-yellow);
+  color: var(--clr-ne-ltgray);
+  font-size: .9rem;
+  font-weight: var(--fw-700);
+  padding: .9em;
+  border: none;
+  border-radius: .3em;
+  margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.062) 0px 10px 20px, rgba(0, 0, 0, 0.06) 0px 6px 6px;
+}
+
 .card:nth-child(3) {
   background-color: var(--clr-pr-ltcyan);
 }
 
+.card:nth-child(3) .text {
+  color: var(--clr-ne-ltgray);
+  line-height: 1.5;
+}
 
 
 footer {
