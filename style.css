@@ -257,6 +257,7 @@ footer {
     grid-template-columns: subgrid;
   }
 
+  
   .price {
     font-size: 2rem;
   }
