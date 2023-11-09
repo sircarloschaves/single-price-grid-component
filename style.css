@@ -219,6 +219,10 @@ footer {
     --fs-subtitle: 1.4rem;
     --fs-text: 1rem;
     --fs-accent-text: 1.1rem;
+
+    display: grid;
+    place-content: center;
+    margin-inline: 0;
   }
 
   .grid-container {
@@ -229,7 +233,7 @@ footer {
   }
 
   .card {
-    padding-block: 2.5rem;
+    padding-block: 2.4rem;
   }
 
   .card:nth-child(1) {
