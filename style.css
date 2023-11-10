@@ -137,7 +137,7 @@ body {
   font-weight: var(--fw-400);
   color: var(--clr-ne-ltgray);
   font-size: var(--fs-comp-text);
-  margin-block-start: .5em;
+  margin-block-start: .7em;
 }
 
 .btn {
@@ -188,7 +188,7 @@ footer {
     --fs-title: 1.35rem;
     --fs-text: 1rem;
     --fs-accent-text: 1rem;
-    --fs-comp-text: 1.2rem;
+    --fs-comp-text: 1rem;
 
     display: grid;
     place-content: center;
