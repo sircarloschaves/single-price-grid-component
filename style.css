@@ -22,6 +22,7 @@
   --fs-title: 1.25rem;
   --fs-text: 0.875rem;
   --fs-accent-text: .9rem;
+  --fs-comp-text: 1rem;
 
 }
 
@@ -60,9 +61,10 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  border-radius: .3rem;
+  border-radius: .4rem;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-inline: auto;
 }
 
 .card {
@@ -97,7 +99,7 @@ body {
 
 .card:nth-child(1) .accent-text {
   font-family: var(--ff-karla);
-  font-size: 0.95rem;
+  font-size: var(--fs-accent-text);
   font-weight: var(--fw-700);
   color: var(--clr-pr-yellow);
   margin-block-start: 1.4rem;
@@ -134,7 +136,7 @@ body {
   font-family: var(--ff-karla);
   font-weight: var(--fw-400);
   color: var(--clr-ne-ltgray);
-  font-size: 1rem;
+  font-size: var(--fs-comp-text);
   margin-block-start: .5em;
 }
 
@@ -152,7 +154,6 @@ body {
   cursor: pointer;
   transition: background 200ms;
   box-shadow: rgba(50, 50, 93, 0.074) 0px 13px 27px -5px, rgba(0, 0, 0, 0.078) 0px 8px 16px -8px;
-  
 }
 
 .btn:hover,
@@ -176,3 +177,49 @@ footer {
   z-index: 2;
 }
 
+@media screen and (min-width: 376px) {
+  .grid-container {
+    max-width: 324px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    --fs-title: 1.35rem;
+    --fs-text: 1rem;
+    --fs-accent-text: 1rem;
+    --fs-comp-text: 1.2rem;
+
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding-inline: 0;
+  }
+
+  .grid-container { 
+    max-width: 700px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    padding-block: 2.2rem;
+    padding-inline: 2rem;
+  }
+
+  .card:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .card:nth-child(1) .text {
+    width: 60ch;
+  }
+
+  .month {
+    font-size: 1rem;
+  }
+
+  .btn {
+    margin-block-start: 2rem;
+    padding: 1.1em;
+  }
+}
